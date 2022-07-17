@@ -1,1 +1,41 @@
-<router-outlet></router-outlet>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+
+
+<body>
+  <div id="container">
+    <div id="header">
+
+      <a class="contact" [routerLink]="'home'">Home</a>
+      <a class="add-monitor" [routerLink]="'add-monitor'">Add monitor</a>
+      <a class="home" [routerLink]="'about-us'">About us</a>
+      <a class="reports" [routerLink]="'reports'">Reports</a>
+    </div>
+    <div id="wrapper">
+      <div id="content">
+        <router-outlet></router-outlet>
+
+      </div>
+    </div>
+
+    <div id="extra">
+      <p><strong>3. Additional Stuff</strong></p>
+      <h3>In this guide you will learn:</h3>
+      <ul>
+        <li>How to use CSS Flexbox to build modern layouts</li>
+        <li>How to align items both vertically and horizontally</li>
+        <li>How to order items within container</li>
+        <li>And more</li>
+      </ul>
+    </div>
+    <div id="footer">
+      <p>Footer</p>
+    </div>
+  </div>
+  <script type="text/javascript">
+    AddFillerLink("content", "navigation", "extra")
+
+  </script>
+</body>
+
+</html>

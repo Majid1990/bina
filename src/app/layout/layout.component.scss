@@ -1,0 +1,119 @@
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: #292929;
+    font: 90% Roboto, Arial, sans-serif;
+    font-weight: 300;
+}
+
+p {
+    padding: 0 10px;
+    line-height: 1.8;
+}
+
+ul li {
+    padding-right: 10px;
+    line-height: 1.6;
+}
+
+h3 {
+    padding: 5px 20px;
+    margin: 0;
+}
+
+div#header {
+    position: relative;
+}
+
+div#header  {
+    display: flex;
+    height: 80px;
+    line-height: 80px;
+    margin: 0;
+    padding-left: 10px;
+    background: rgb(177, 208, 207);
+    color: #292929;
+}
+
+// div#header a {
+//     position: absolute;
+//     right: 0;
+//     top: 23px;
+//     padding: 10px;
+//     color: #006;
+   
+// }
+div#header a:hover {
+color: red;
+}
+.contact {
+flex: 1.5;
+background-color: rgb(177, 208, 207);
+text-decoration: none;
+}
+.add-monitor {
+    flex: 1.5;
+    background-color: rgb(177, 208, 207);
+    text-decoration: none;
+}
+.home {
+    flex: 1.5;
+    background-color: rgb(177, 208, 207);
+    text-decoration: none;
+}
+.reports {
+    flex: 9.5;
+  //  background-color: rgb(177, 208, 207);
+    text-decoration: none;
+}
+
+// div#navigation {
+//     background: #7cb71c;
+// }
+
+// div#navigation li {
+//     list-style: none;
+// }
+
+div#extra {
+    background: #147FA9;
+}
+
+div#footer {
+    background: #42444e;
+    color: #fff;
+}
+
+div#footer p {
+    padding: 20px 10px;
+}
+
+div#wrapper {
+    float: left;
+    width: 100%;
+}
+
+div#content {
+    margin-right: 400px;
+}
+
+div#navigation {
+    float: left;
+    width: 200px;
+    margin-left: -400px;
+}
+
+div#extra {
+    float: left;
+    width: 200px;
+    margin-left: -200px;
+}
+
+div#footer {
+    clear: left;
+    width: 100%;
+}
