@@ -5,6 +5,8 @@ import { AddMonitorComponent } from '../add-monitor.component';
 import { MatListModule } from '@angular/material/list';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
+import { MatInputModule } from '@angular/material/input';
+
 
 @NgModule({
   declarations: [
@@ -15,7 +17,8 @@ import { MatSelectModule } from '@angular/material/select';
     AddMonitorRoutingModule,
     MatListModule,
     MatFormFieldModule,
-    MatSelectModule
+    MatSelectModule,
+    MatInputModule,
   ]
 })
 export class AddMonitorModule { }
