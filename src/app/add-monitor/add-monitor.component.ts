@@ -12,4 +12,8 @@ export class AddMonitorComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  deviceSelected() {
+
+  }
+
 }
