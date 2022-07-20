@@ -1,25 +1,54 @@
-<div class="container">
-  <mat-list-item role="listitem">Item 1</mat-list-item>
+<div class="mainDiv">
+  <form [formGroup]="mainFormGroup!" (ngSubmit)="submit($event)">
+    <!-- <mat-list-item role="listitem">Item 1</mat-list-item>
   <mat-list-item role="listitem">Item 2</mat-list-item>
-  <mat-list-item role="listitem">Item 3</mat-list-item>
+  <mat-list-item role="listitem">Item 3</mat-list-item> -->
+    <mat-form-field class="d-block" appearance="fill" fxFlex>
+      <mat-label>Select a monitor type</mat-label>
+      <mat-select [(value)]="selected" formControlName="monitorType" (selectionChange)="selectedDevice($event)">
+        <mat-option value="switch">Switch</mat-option>
+        <mat-option value="router">Router</mat-option>
+        <mat-option value="website">Website</mat-option>
+        <mat-option value="database">Database</mat-option>
+        <mat-option value="monitorLog">Monitor log</mat-option>
+        <mat-option value="temprature">Temprature</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <div formGroupName="generalInfo">
+      <mat-form-field class="example-full-width d-block" appearance="fill" fxFlex>
+        <mat-label> Monitor name </mat-label>
+        <input formControlName="monitorName" matInput placeholder="Write the monitor name" value="">
+      </mat-form-field>
 
-  <mat-form-field appearance="fill">
-    <mat-label>Input</mat-label>
-    <input matInput>
-  </mat-form-field>
-  <mat-form-field class="input-" appearance="fill">
-    <mat-label>Select</mat-label>
-    <mat-select>
-      <mat-option value="switch">Switch</mat-option>
-      <mat-option value="router">Router</mat-option>
-      <mat-option value="website">Website</mat-option>
-      <mat-option value="database">Database</mat-option>
-      <mat-option value="MonitorLog">Monitor log</mat-option>
-      <mat-option value="Tempreture">Tempreture</mat-option>
-    </mat-select>
-  </mat-form-field>
-  <mat-form-field appearance="fill">
-    <mat-label>Textarea</mat-label>
-    <textarea matInput></textarea>
-  </mat-form-field>
+      <mat-form-field class="example-full-width d-block" appearance="fill" fxFlex>
+        <mat-label> Created by </mat-label>
+        <input formControlName="createdBy" matInput placeholder="Created by" value="">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width d-block" appearance="fill" fxFlex>
+        <mat-label> Created date </mat-label>
+        <input formControlName="createdDate" matInput placeholder="Select the date" value="">
+      </mat-form-field>
+    </div>
+    <div formGroupName="monitoringFrequency">
+      <mat-form-field class="example-full-width" appearance="fill" fxFlex>
+        <mat-label> Frequency </mat-label>
+        <input formControlName="frequency" matInput placeholder="Write the Frequency" value="">
+      </mat-form-field>
+      <mat-slide-toggle formControlName="monitorInNight"> Monitor In Night </mat-slide-toggle>
+    </div>
+    <div formGroupName="contactInfo">
+      <mat-form-field class="example-full-width mt-block" appearance="fill">
+        <mat-label>Email </mat-label>
+        <input formControlName="email" matInput placeholder="Email address to be notified" value="">
+      </mat-form-field>
+      <mat-form-field class="example-full-width" appearance="fill" fxFlex>
+        <mat-label>Mobile number </mat-label>
+        <input formControlName="mobileNumber" matInput placeholder="Type mobile number to get alarm" value="">
+      </mat-form-field>
+    </div>
+  </form>
+  <button mat-stroked-button color="primary" (click)="submit(selected)">Save</button>
+
+
 </div>
