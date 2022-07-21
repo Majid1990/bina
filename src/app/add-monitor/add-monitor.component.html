@@ -48,7 +48,15 @@
       </mat-form-field>
     </div>
   </form>
+
+  <app-database [parentFormGroup]="mainFormGroup" *ngIf="selected == 'database'"></app-database>
+  <app-monitor-log [parentFormGroup]="mainFormGroup" *ngIf="selected == 'monitorLog'"></app-monitor-log>
+  <app-router [parentFormGroup]="mainFormGroup" *ngIf="selected == 'router'"></app-router>
+  <app-switch [parentFormGroup]="mainFormGroup" *ngIf="selected == 'switch'"></app-switch>
+  <app-temprature [parentFormGroup]="mainFormGroup" *ngIf="selected == 'temprature'"></app-temprature>
+  <app-website [parentFormGroup]="mainFormGroup" *ngIf="selected == 'website'"
+    (webLinkURL)="webLinkURLReceived($event)">
+  </app-website>
+
   <button mat-stroked-button color="primary" (click)="submit(selected)">Save</button>
-
-
 </div>

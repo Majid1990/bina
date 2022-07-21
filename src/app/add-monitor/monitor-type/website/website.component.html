@@ -1,1 +1,22 @@
-<p>website works!</p>
+<div [formGroup]="parentFormGroup!">
+  <div formGroupName="website">
+    <mat-form-field class="example-full-width" appearance="fill" width="400px">
+      <mat-label> Website address </mat-label>
+      <input formControlName="websiteName" matInput placeholder="Write a website address" value="">
+      <span
+        *ngIf="parentFormGroup?.get('website')?.get('websiteName')?.invalid && parentFormGroup?.get('website')?.get('websiteName')?.touched"
+        style="color: red">Your
+        website is wrong</span>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="fill" width="500px">
+      <mat-label> Warning: </mat-label>
+      <input formControlName="warning" type="number" matInput placeholder="Worning pressure" value="">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="fill" width="500px">
+      <mat-label> Critical: </mat-label>
+      <input formControlName="critical" type="number" matInput placeholder="??" value="">
+    </mat-form-field>
+  </div>
+</div>

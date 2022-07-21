@@ -11,6 +11,7 @@ import { AddMonitorService } from './add-monitor.service';
 export class AddMonitorComponent implements OnInit {
   selected?: any;
   mainFormGroup?: FormGroup;
+  website: string = '';
   constructor(private fb: FormBuilder, private router: Router, private addMonitorService: AddMonitorService) { }
 
   ngOnInit(): void {
@@ -40,6 +41,10 @@ export class AddMonitorComponent implements OnInit {
     this.addMonitorService.createMonitor(this.mainFormGroup?.value).subscribe(x => {
       console.log(x)
     })
+    this.mainFormGroup?.reset()
+  }
+  webLinkURLReceived(e: string) {
+    this.website = e
   }
 
 }

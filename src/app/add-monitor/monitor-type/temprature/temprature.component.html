@@ -1,1 +1,21 @@
-<p>temprature works!</p>
+<div>
+  <form [formGroup]="parentFormGroup!">
+    <div formGroupName="tempreture">
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label> Write tempreture number </mat-label>
+        <input matInput placeholder="Write the tempreture number" formControlName="degree" value="">
+
+        <span
+          *ngIf="parentFormGroup?.get('tempreture')?.get('degree')?.invalid && parentFormGroup?.get('tempreture')?.get('degree')?.touched">Error!!!</span>
+      </mat-form-field>
+
+      <mat-form-field class="complex-full-width" appearance="fill">
+        <mat-label>Select tempreture type</mat-label>
+        <mat-select required formControlName="tempretureUnit">
+          <mat-option value="farenhight">Fahrenheit°</mat-option>
+          <mat-option value="celcious">Celsius°</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+  </form>
+</div>

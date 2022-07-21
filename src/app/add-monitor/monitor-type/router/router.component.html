@@ -1,1 +1,13 @@
-<p>router works!</p>
+<div>
+  <form [formGroup]="parentFormGroup!">
+    <div formGroupName="router">
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label> Router IP </mat-label>
+        <input matInput placeholder="Write the router IP" formControlName="selectedRouterType" value="">
+        <span class="red"
+          *ngIf="parentFormGroup?.get('router')?.get('selectedRouterType')?.valid && parentFormGroup?.get('router')?.get('selectedRouterType')?.touched">
+          Not valid!</span>
+      </mat-form-field>
+    </div>
+  </form>
+</div>

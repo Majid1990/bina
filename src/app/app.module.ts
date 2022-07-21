@@ -5,26 +5,30 @@ import { AppComponent } from './app.component';
 import { LayoutComponent } from './layout/layout.component';
 import { HomeComponent } from './home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { RouterComponent } from './add-monitor/monitor-type/router/router.component';
-import { WebsiteComponent } from './add-monitor/monitor-type/website/website.component';
-import { DatabaseComponent } from './add-monitor/monitor-type/database/database.component';
-import { MonitorLogComponent } from './add-monitor/monitor-type/monitor-log/monitor-log.component';
-import { TempratureComponent } from './add-monitor/monitor-type/temprature/temprature.component';
-import { SwitchComponent } from './add-monitor/monitor-type/switch/switch.component';
-import { ReactiveFormsModule } from '@angular/forms';
+// import { RouterComponent } from './add-monitor/monitor-type/router/router.component';
+// import { WebsiteComponent } from './add-monitor/monitor-type/website/website.component';
+// import { DatabaseComponent } from './add-monitor/monitor-type/database/database.component';
+// import { MonitorLogComponent } from './add-monitor/monitor-type/monitor-log/monitor-log.component';
+// import { TempratureComponent } from './add-monitor/monitor-type/temprature/temprature.component';
+// import { SwitchComponent } from './add-monitor/monitor-type/switch/switch.component';
+// import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     LayoutComponent,
     HomeComponent,
-    RouterComponent,
-    WebsiteComponent,
-    DatabaseComponent,
-    MonitorLogComponent,
-    TempratureComponent,
-    SwitchComponent,
+    // LogReportComponent,
+    // SensorReportComponent,
+    // WebsiteReportComponent,
+    // RouterComponent,
+    // WebsiteComponent,
+    // DatabaseComponent,
+    // MonitorLogComponent,
+    // TempratureComponent,
+    // SwitchComponent,
 
   ],
   imports: [

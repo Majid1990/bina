@@ -1,1 +1,10 @@
-<p>switch works!</p>
+<div>
+  <form [formGroup]="parentFormGroup!">
+    <div formGroupName="swName">
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label> switch type </mat-label>
+        <input formControlName="switchType" matInput placeholder="Write a switch type" value="" width="300">
+      </mat-form-field>
+    </div>
+  </form>
+</div>

@@ -1,1 +1,42 @@
-<p>monitor-log works!</p>
+<div>
+  <form [formGroup]="parentFormGroup!">
+    <div formGroupName="log">
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label> Log IP number </mat-label>
+        <input matInput placeholder="Write log IP number" formControlName="selectedLog" value="">
+        <span class="red"
+          *ngIf="parentFormGroup?.get('log')?.get('selectedLog')?.touched && !parentFormGroup?.get('log')?.get('selectedLog')?.valid">
+          Not valid!</span>
+      </mat-form-field>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label> Credential </mat-label>
+        <input matInput placeholder="Input the log Credential" value="" formControlName="credential">
+        <span class="red"
+          *ngIf="parentFormGroup?.get('log')?.get('credential')?.touched && !parentFormGroup?.get('log')?.get('credential')?.valid">
+          Not valid!</span>
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label> Log regex </mat-label>
+        <input matInput placeholder="Write Log Regex" formControlName="selectedLogregex" value="">
+        <span class="red"
+          *ngIf="parentFormGroup?.get('log')?.get('selectedLogregex')?.touched && !parentFormGroup?.get('log')?.get('selectedLogregex')?.valid">
+          Not valid!</span>
+      </mat-form-field>
+
+      <section class="example-section section">
+        <h4>Select the fields you need to be checked</h4>
+        <p>
+          <mat-checkbox formControlName="information">Information</mat-checkbox>
+        </p>
+        <p>
+          <mat-checkbox formControlName="error">Error</mat-checkbox>
+        </p>
+        <p>
+          <mat-checkbox formControlName="warning">Warning</mat-checkbox>
+        </p>
+      </section>
+    </div>
+
+  </form>
+</div>

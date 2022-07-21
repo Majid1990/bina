@@ -1,1 +1,21 @@
-<p>database works!</p>
+<div>
+  <form [formGroup]="parentFormGroup!">
+    <div formGroupName="database">
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label> Write database name </mat-label>
+        <input matInput placeholder="Write the database name" formControlName="selectedDatabase" value="">
+        <span class="red"
+          *ngIf="parentFormGroup?.get('database')?.get('selectedDatabase')?.invalid && parentFormGroup?.get('database')?.get('selectedDatabase')?.touched">
+          Not valid!</span>
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label> Write database type </mat-label>
+        <input matInput placeholder="Write the database type" formControlName="selectedDatabasetype" value="">
+        <span class="red"
+          *ngIf="parentFormGroup?.get('database')?.get('selectedDatabase')?.touched && parentFormGroup?.get('database')?.get('selectedDatabase')?.invalid">
+          Not valid!</span>
+      </mat-form-field>
+    </div>
+  </form>
+</div>

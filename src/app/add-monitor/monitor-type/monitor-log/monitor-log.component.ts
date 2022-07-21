@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-monitor-log',
@@ -6,10 +7,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./monitor-log.component.scss']
 })
 export class MonitorLogComponent implements OnInit {
+  @Input() parentFormGroup?: FormGroup;
+  logFormGroup?: FormGroup;
 
-  constructor() { }
+  constructor(private fb: FormBuilder) { }
 
   ngOnInit(): void {
+    this.logFormGroup = this.fb.group({
+      selectedLog: new FormControl(null, Validators.required),
+      selectedLogregex: new FormControl(null, Validators.required),
+      credential: new FormControl(null, Validators.required),
+      // selectedLogType: new FormControl(null),
+      information: new FormControl(null),
+      error: new FormControl(null),
+      warning: new FormControl(null),
+    })
+
+    this.parentFormGroup?.addControl('log', this.logFormGroup)
   }
 
 }
