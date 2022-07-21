@@ -6,18 +6,20 @@ import { LogReportComponent } from '../log-report/log-report.component';
 import { SensorReportComponent } from '../sensor-report/sensor-report.component';
 import { WebsiteReportComponent } from '../website-report/website-report.component';
 import { MatTableModule } from '@angular/material/table';
-
+import { MatIconModule } from '@angular/material/icon';
 @NgModule({
   declarations: [
     ReportsComponent,
     LogReportComponent,
     SensorReportComponent,
-    WebsiteReportComponent
+    WebsiteReportComponent,
+
   ],
   imports: [
     CommonModule,
     ReportsRoutingModule,
-    MatTableModule
+    MatTableModule,
+    MatIconModule
   ]
 })
 export class ReportsModule { }

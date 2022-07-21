@@ -1,1 +1,25 @@
-<p>sensor-report works!</p>
+<table mat-table [dataSource]="sensorData" class="mat-elevation-z8">
+  <ng-container matColumnDef="monitorDate">
+    <th mat-header-cell *matHeaderCellDef>
+      <mat-icon>date_range</mat-icon> Monitor Date
+    </th>
+    <td mat-cell *matCellDef="let x"> {{x.monitorDate}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="monitorName">
+    <th mat-header-cell *matHeaderCellDef>
+      <mat-icon>desktop_mac</mat-icon> Monitor name
+    </th>
+    <td mat-cell *matCellDef="let x"> {{x.monitorName}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="temprature">
+    <th mat-header-cell *matHeaderCellDef>
+      <mat-icon>whatshot</mat-icon> Temprature
+    </th>
+    <td mat-cell *matCellDef="let x"> {{x.temprature}} </td>
+  </ng-container>
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+</table>

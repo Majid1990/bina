@@ -15,7 +15,15 @@
           class="material-icons custom">{{'done'}}</i>
         {{x.level.toLowerCase()}}
 
+        <i *ngIf="x?.level?.toLowerCase() === 'critical'" [ngStyle]="{color: 'red', fontSize: '30px'}"
+          class="material-icons custom">
+          <mat-icon>cancel</mat-icon>
+        </i>
+
+        {{x.level.toLowerCase()}}
+
       </td>
+
     </ng-container>
 
     <ng-container matColumnDef="message">
