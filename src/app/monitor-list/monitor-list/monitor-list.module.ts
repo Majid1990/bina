@@ -2,7 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MonitorListRoutingModule } from './monitor-list-routing.module';
 import { MonitorListComponent } from '../monitor-list.component';
-
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 @NgModule({
   declarations: [
@@ -10,7 +11,9 @@ import { MonitorListComponent } from '../monitor-list.component';
   ],
   imports: [
     CommonModule,
-    MonitorListRoutingModule
+    MonitorListRoutingModule,
+    MatTableModule,
+    MatPaginatorModule
   ]
 })
 export class MonitorListModule { }
