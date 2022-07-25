@@ -41,7 +41,7 @@ export class MonitorListComponent implements OnInit {
   dataSorce = new MatTableDataSource(this.displayedColumns); // ELEMENT_DATA
 
   length = 0;
-  pageSize = 4;
+  pageSize = 8;
   pageSizeOptions: number[] = [2, 4, 6, 8, 10];
   pageEvent?: PageEvent;
   constructor(private monitorListService: MonitorListService) { }

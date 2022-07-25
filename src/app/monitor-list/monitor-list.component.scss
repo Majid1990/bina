@@ -7,14 +7,16 @@
    border-bottom: 1px solid rgb(217, 217, 217);
   }
   .mat-row .mat-cell {
-    border-bottom: 1px solid 
-    transparent;
-    border-top: 1px solid rgb(238, 238, 238) ;
+    border-bottom: 1px solid transparent;
+    border-top: 1px solid rgb(238, 238, 238);
     cursor: pointer;
   }
   
   .mat-row:hover .mat-cell {
     border-color: currentColor;
+    color: black;
+    font-weight: bold;
+    padding-right: 3.1px;
   }
   
   .demo-row-is-clicked {
@@ -28,5 +30,12 @@
   table td{
     color: rgb(46, 44, 44); 
     padding-left: 40px;
+    padding-right: 5px;
     text-align: left;
+  }
+  table td:first-child {
+    border-left: 1px solid rgb(238, 238, 238);
+  }
+  table td:last-child {
+    border-right: 1px solid rgb(238, 238, 238)
   }
