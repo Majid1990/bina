@@ -3,10 +3,13 @@
   }
   table{
    text-align: end;
+   margin-left: 35px;
+   border-bottom: 1px solid rgb(217, 217, 217);
   }
   .mat-row .mat-cell {
-    border-bottom: 1px solid transparent;
-    border-top: 1px solid transparent;
+    border-bottom: 1px solid 
+    transparent;
+    border-top: 1px solid rgb(238, 238, 238) ;
     cursor: pointer;
   }
   
@@ -17,4 +20,13 @@
   .demo-row-is-clicked {
     font-weight: bold;
   }
-  
+  table th{
+    color: rgb(46, 44, 44); 
+    padding-left: 40px;
+    text-align: left;
+  }
+  table td{
+    color: rgb(46, 44, 44); 
+    padding-left: 40px;
+    text-align: left;
+  }
