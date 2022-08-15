@@ -6,9 +6,11 @@ import { Injectable } from '@angular/core';
 })
 export class MonitorListService {
 
+  data: any;
   constructor(private http: HttpClient) { }
 
   monitorList() {
-    return this.http.get('https://monitoring-a4b2a-default-rtdb.firebaseio.com/posts.json')
+    debugger
+    return this.data = this.http.get('https://monitoring-a4b2a-default-rtdb.firebaseio.com/posts.json')
   }
 }

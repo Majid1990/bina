@@ -12,12 +12,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // import { SwitchComponent } from './add-monitor/monitor-type/switch/switch.component';
 // import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { AboutUsComponent } from './about-us/about-us.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LayoutComponent,
+    AboutUsComponent,
     // LogReportComponent,
     // SensorReportComponent,
     // WebsiteReportComponent,

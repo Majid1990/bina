@@ -6,8 +6,12 @@ const routes: Routes = [
   { path: 'reports', loadChildren: () => import('./reports/reports/reports.module').then(x => x.ReportsModule) },
   { path: 'home', loadChildren: () => import('./home/home/home.module').then(x => x.HomeModule) },
   { path: 'monitorList', loadChildren: () => import('./monitor-list/monitor-list/monitor-list.module').then(x => x.MonitorListModule) },
+  { path: 'about-us', loadChildren: () => import('./about-us/about-us/about-us.module').then(x => x.AboutUsModule) },
+
   { path: '', loadChildren: () => import('./home/home/home.module').then(x => x.HomeModule) }
 ];
+
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
