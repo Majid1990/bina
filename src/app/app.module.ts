@@ -13,6 +13,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AboutUsComponent } from './about-us/about-us.component';
+import { IpYpeDirective } from './ip-ype.directive';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { AboutUsComponent } from './about-us/about-us.component';
     AppComponent,
     LayoutComponent,
     AboutUsComponent,
+    IpYpeDirective,
     // LogReportComponent,
     // SensorReportComponent,
     // WebsiteReportComponent,

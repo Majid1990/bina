@@ -1,3 +1,5 @@
+import { IpYpeDirective } from "../ip-ype.directive"
+
 export interface AddMonitor {
     generalInfo: {
         monitorName: string,
@@ -18,4 +20,5 @@ export interface AddMonitor {
         email: string
     }
     monitorType: string,
+    iPAddress: IpYpeDirective
 }

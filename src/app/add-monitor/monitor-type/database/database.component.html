@@ -16,6 +16,16 @@
           *ngIf="parentFormGroup?.get('database')?.get('selectedDatabase')?.touched && parentFormGroup?.get('database')?.get('selectedDatabase')?.invalid">
           Not valid!</span>
       </mat-form-field>
+
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label> Write database IP </mat-label>
+        <input matInput placeholder="Write the database IP" formControlName="selectedDatabaseIP" value=""
+          (input)="onIpInput()"
+          pattern="^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$">
+        <span class="red"
+          *ngIf="parentFormGroup?.get('database')?.get('selectedDatabase')?.touched && parentFormGroup?.get('database')?.get('selectedDatabase')?.invalid">
+          Not valid!</span>
+      </mat-form-field>
     </div>
   </form>
 </div>
