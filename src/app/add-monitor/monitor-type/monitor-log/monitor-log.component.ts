@@ -26,4 +26,16 @@ export class MonitorLogComponent implements OnInit {
     this.parentFormGroup?.addControl('log', this.logFormGroup)
   }
 
+  onInput() {
+    const ip = this.logFormGroup?.get('selectedLog')?.value;
+    let lastPoint = ip.lastIndexOf('.');
+    if (ip.length - lastPoint === 4) {
+      const firstPart = ip.substring(0, ip.length - 1);
+      const lastPart = ip.substring(ip.length - 1, ip.length);
+      const final = firstPart + '.' + lastPart;
+      this.logFormGroup?.get('selectedLog')?.setValue(final);
+    }
+
+  }
+
 }

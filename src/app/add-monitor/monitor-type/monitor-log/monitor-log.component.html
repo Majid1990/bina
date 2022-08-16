@@ -3,7 +3,8 @@
     <div formGroupName="log">
       <mat-form-field class="example-full-width" appearance="fill">
         <mat-label> Log IP number </mat-label>
-        <input matInput placeholder="Write log IP number" formControlName="selectedLog" value="">
+        <input (input)="onInput()" matInput placeholder="Write log IP number" formControlName="selectedLog" value=""
+          pattern="^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$">
         <span class="red"
           *ngIf="parentFormGroup?.get('log')?.get('selectedLog')?.touched && !parentFormGroup?.get('log')?.get('selectedLog')?.valid">
           Not valid!</span>
