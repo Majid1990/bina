@@ -8,9 +8,7 @@
 
       <mat-form-field class="example-full-width" appearance="fill">
         <mat-label> switch IP </mat-label>
-        <input (input)="onInputIp()" formControlName="switchIP" matInput placeholder="Write a switch IP" value=""
-          width="300"
-          pattern="^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$">
+        <input appIp formControlName="switchIP" matInput placeholder="Write a switch IP" value="" width="300">
       </mat-form-field>
     </div>
   </form>

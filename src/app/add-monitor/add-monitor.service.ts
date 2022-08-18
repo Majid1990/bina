@@ -12,7 +12,7 @@ export class AddMonitorService {
 
 
   createMonitor(eve: any) {
-    debugger
+
     return this.http.post('https://bina-61c21-default-rtdb.firebaseio.com/posts.json', eve)
   }
 }

@@ -18,7 +18,9 @@ import { WebsiteComponent } from '../monitor-type/website/website.component';
 import { TempratureComponent } from '../monitor-type/temprature/temprature.component';
 import { SwitchComponent } from '../monitor-type/switch/switch.component';
 import { MatCheckboxModule } from '@angular/material/checkbox';
-
+// import { IpDirective } from 'src/app/ip.directive';
+// import { IpDirective } from '../ip.directive';
+import { IpDirective } from '../../ip.directive'
 
 @NgModule({
   declarations: [
@@ -28,7 +30,8 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
     RouterComponent,
     WebsiteComponent,
     TempratureComponent,
-    SwitchComponent
+    SwitchComponent,
+    IpDirective
 
   ],
   imports: [

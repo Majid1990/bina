@@ -16,12 +16,14 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { IpYpeDirective } from './ip-ype.directive';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
     LayoutComponent,
     AboutUsComponent,
     IpYpeDirective,
+
     // LogReportComponent,
     // SensorReportComponent,
     // WebsiteReportComponent,
