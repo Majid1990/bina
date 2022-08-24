@@ -3,8 +3,7 @@
     <div formGroupName="router">
       <mat-form-field class="example-full-width" appearance="fill">
         <mat-label> Router IP </mat-label>
-        <input (input)="inInputData()" matInput placeholder="Write the router IP" formControlName="selectedRouterType"
-          value="">
+        <input appIp matInput placeholder="Write the router IP" formControlName="selectedRouterType" value="">
         <span class="red"
           *ngIf="parentFormGroup?.get('router')?.get('selectedRouterType')?.invalid && parentFormGroup?.get('router')?.get('selectedRouterType')?.touched">
           Not valid!</span>
