@@ -1,11 +1,9 @@
 <div class="mainDiv">
   <form [formGroup]="mainFormGroup!" (ngSubmit)="submit($event)">
-    <!-- <mat-list-item role="listitem">Item 1</mat-list-item>
-  <mat-list-item role="listitem">Item 2</mat-list-item>
-  <mat-list-item role="listitem">Item 3</mat-list-item> -->
+
     <mat-form-field class="d-block" appearance="fill" fxFlex>
       <mat-label>Select a monitor type</mat-label>
-      <mat-select [(value)]="selected" formControlName="monitorType" (selectionChange)="selectedDevice($event)">
+      <mat-select [(value)]="selectedMonitor" formControlName="monitorType" (selectionChange)="selectedDevice($event)">
         <mat-option value="switch">Switch</mat-option>
         <mat-option value="router">Router</mat-option>
         <mat-option value="website">Website</mat-option>
@@ -49,14 +47,14 @@
     </div>
   </form>
 
-  <app-database [parentFormGroup]="mainFormGroup" *ngIf="selected == 'database'"></app-database>
-  <app-monitor-log [parentFormGroup]="mainFormGroup" *ngIf="selected == 'monitorLog'"></app-monitor-log>
-  <app-router [parentFormGroup]="mainFormGroup" *ngIf="selected == 'router'"></app-router>
-  <app-switch [parentFormGroup]="mainFormGroup" *ngIf="selected == 'switch'"></app-switch>
-  <app-temprature [parentFormGroup]="mainFormGroup" *ngIf="selected == 'temprature'"></app-temprature>
-  <app-website [parentFormGroup]="mainFormGroup" *ngIf="selected == 'website'"
+  <app-database [parentFormGroup]="mainFormGroup" *ngIf="selectedMonitor == 'database'"></app-database>
+  <app-monitor-log [parentFormGroup]="mainFormGroup" *ngIf="selectedMonitor == 'monitorLog'"></app-monitor-log>
+  <app-router [parentFormGroup]="mainFormGroup" *ngIf="selectedMonitor == 'router'"></app-router>
+  <app-switch [parentFormGroup]="mainFormGroup" *ngIf="selectedMonitor == 'switch'"></app-switch>
+  <app-temprature [parentFormGroup]="mainFormGroup" *ngIf="selectedMonitor == 'temprature'"></app-temprature>
+  <app-website [parentFormGroup]="mainFormGroup" *ngIf="selectedMonitor == 'website'"
     (webLinkURL)="webLinkURLReceived($event)">
   </app-website>
 
-  <button mat-stroked-button color="primary" (click)="submit(selected)">Save</button>
+  <button mat-stroked-button color="primary" (click)="submit(selectedMonitor)">Save</button>
 </div>

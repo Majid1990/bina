@@ -1,37 +1,24 @@
 table {
-    width: 90%;
-    margin-left: 5%;
-  }
-    // table td {
-    //   color: green;
-    //   padding: 40px 40px;
-    // }
-    // table th {
-    //   color: black;
-    //   padding-left: 40px;
-    //   font-size: large;
-    //   background-color: aqua;
-    // }
-  
-    // .demo-table {
-    //   width: 100%;
-    // }
-    
-    // .mat-row .mat-cell {
-    //   border-bottom: 1px solid transparent;
-    //   border-top: 1px solid transparent;
-    //   cursor: pointer;
-    // }
-    
-    // .mat-row:hover .mat-cell {
-    //   border-color: currentColor;
-    // }
-    
-    // .demo-row-is-clicked {
-    //   font-weight: bold;
-    // }
-  
-    // .mat-form-field {
-    //   margin-right: 12px;
-    // }
-  
+  width: 90%;
+  margin-left: 5%;
+}
+
+.monitorState {
+  color: black;
+  position: relative;
+  bottom: 5px;
+}
+
+.tempratureStatus {
+  margin-left: 14%;
+}
+
+.mat-row:hover .mat-cell {
+  border-color: black;
+  color: blue;
+}
+
+.mat-row .mat-cell {
+  border-top: 1px solid rgb(238, 238, 238);
+  cursor: pointer;
+}

@@ -10,9 +10,7 @@ export class IpDirective implements OnInit {
     // const ip = this.ipService.formsValue;
     const ip = this.el.nativeElement.value;
     var lastDot = ip.lastIndexOf('.');
-
     if (ip.length - lastDot === 4) {
-
       const firstPart = ip.substring(0, ip.length - 1);
       const lastPart = ip.substring(ip.length - 1, ip.length);
       const final = firstPart + '.' + lastPart;

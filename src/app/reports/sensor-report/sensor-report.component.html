@@ -1,23 +1,24 @@
 <table mat-table [dataSource]="sensorData" class="mat-elevation-z8">
-  <ng-container matColumnDef="monitorDate">
-    <th mat-header-cell *matHeaderCellDef>
-      <mat-icon>date_range</mat-icon> Monitor Date
-    </th>
-    <td mat-cell *matCellDef="let x"> {{x.monitorDate}} </td>
-  </ng-container>
-
   <ng-container matColumnDef="monitorName">
     <th mat-header-cell *matHeaderCellDef>
-      <mat-icon>desktop_mac</mat-icon> Monitor name
+      <mat-icon>desktop_mac</mat-icon><span class="monitorState"> Sensor monitor name</span>
     </th>
     <td mat-cell *matCellDef="let x"> {{x.monitorName}} </td>
   </ng-container>
 
+  <ng-container matColumnDef="monitorDate">
+    <th mat-header-cell *matHeaderCellDef>
+
+      <mat-icon>date_range</mat-icon><span class="monitorState"> Monitor Date</span>
+    </th>
+    <td mat-cell *matCellDef="let x"> {{x.monitorDate}} </td>
+  </ng-container>
+
   <ng-container matColumnDef="temprature">
     <th mat-header-cell *matHeaderCellDef>
-      <mat-icon>whatshot</mat-icon> Temprature
+      <mat-icon>whatshot</mat-icon><span class="monitorState"> Temprature</span>
     </th>
-    <td mat-cell *matCellDef="let x"> {{x.temprature}} </td>
+    <td mat-cell *matCellDef="let x"> <span class="tempratureStatus">{{x.temprature}} </span></td>
   </ng-container>
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
   <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>

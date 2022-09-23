@@ -1,41 +1,24 @@
-// table td {
-//     color: green;
-//     padding: 40px 40px;
-//     /* background-color: rgb(238, 238, 238); */
-    
-//   }
   table {
     width: 90%;
     margin-left: 5%;
   }
-  
-//   table th {
-//     padding-left: 40px;
-//     color: black;
-//     font-size: large;
-//     background-color: aqua;
-//   }
-//   .demo-table {
-//     width: 100%;
-//   }
-  
-//   .mat-row .mat-cell {
-//     border-bottom: 1px solid transparent;
-//     border-top: 1px solid transparent;
-//     cursor: pointer;
-//   }
-  
-//   .mat-row:hover .mat-cell {
-//     border-color: currentColor;
-//   }
-  
-//   .demo-row-is-clicked {
-//     font-weight: bold;
-//   }
-  
-//   .mat-form-field {
-//     margin-right: 12px;
-//   }
-//   .mainDiv {
-//   background-color: rgba(238, 238, 238, 0.545);
-//   }
+
+  .monitorState {
+    color: black;
+    position: relative;
+    bottom: 5px;
+  }
+
+  .responsetimeStatus {
+    margin-left: 14%;
+  }
+
+  .mat-row:hover .mat-cell {
+    border-color: black;
+    color: blue;
+  }
+
+  .mat-row .mat-cell {
+    border-top: 1px solid rgb(238, 238, 238);
+    cursor: pointer;
+  }

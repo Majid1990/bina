@@ -9,7 +9,7 @@ import { AddMonitorService } from './add-monitor.service';
   styleUrls: ['./add-monitor.component.scss']
 })
 export class AddMonitorComponent implements OnInit {
-  selected?: any;
+  selectedMonitor?: any;
   mainFormGroup?: FormGroup;
   website: string = '';
   constructor(private fb: FormBuilder, private router: Router, private addMonitorService: AddMonitorService) { }

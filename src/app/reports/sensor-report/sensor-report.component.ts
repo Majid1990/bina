@@ -10,7 +10,7 @@ import { ReportService } from '../report.service';
 export class SensorReportComponent implements OnInit {
   dataList2: DisplaySensor[] = []
   sensorData: DisplaySensor[] = [];
-  displayedColumns: string[] = ['monitorDate', 'monitorName', 'temprature']
+  displayedColumns: string[] = ['monitorName', 'monitorDate', 'temprature']
 
   constructor(private reportService: ReportService) { }
 

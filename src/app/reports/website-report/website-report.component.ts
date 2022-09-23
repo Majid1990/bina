@@ -9,7 +9,7 @@ import { ReportService } from '../report.service';
 export class WebsiteReportComponent implements OnInit {
 
   websiteData: WebsiteReport[] = [];
-  displayedColumns: string[] = ['monitorDate', 'monitorName', 'responsetime']
+  displayedColumns: string[] = ['monitorName', 'monitorDate', 'responsetime']
   constructor(private reportService: ReportService) { }
 
   ngOnInit(): void {

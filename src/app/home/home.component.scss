@@ -1,11 +1,17 @@
 h1 {
-    text-align: center;
-    font-weight: bold;
-    color: blue;
+  text-align: center;
+  font-weight: bold;
+  color: blue;
 }
+
 div {
-    background-color: rgb(235, 235, 235);
-    padding: 15px;
-    justify-content: center;
-    line-height: 1.5em;
+  background-color: rgb(235, 235, 235);
+  padding: 15px;
+  justify-content: center;
+  line-height: 1.5em;
+}
+
+.explanation {
+  font-size: 18px;
+  background-color: rgb(235, 235, 235);
 }

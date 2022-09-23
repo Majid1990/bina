@@ -8,7 +8,7 @@ import { ReportService } from '../report.service';
 })
 export class LogReportComponent implements OnInit {
   reportLogData: LogReport[] = []
-  displayedColumns: string[] = ['ip', 'level', 'message', 'monitorData', 'monitorName', 'server', 'source']
+  displayedColumns: string[] = ['monitorName', 'level', 'server', 'message', 'monitorData', 'ip', 'source']
   constructor(private reportService: ReportService) { }
 
   ngOnInit(): void {
@@ -21,7 +21,6 @@ export class LogReportComponent implements OnInit {
 
         }
       }
-
     })
   }
 
