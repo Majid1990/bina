@@ -6,3 +6,26 @@
   table th {
     color: black;
   }
+
+  .message {
+    margin-left: 19%;
+  }
+
+  .monitorDate {
+    margin-left: 12%;
+  }
+
+  .mat-row:hover .mat-cell {
+    border-color: black;
+    color: blue;
+  }
+
+  .mat-row .mat-cell {
+    border-top: 1px solid rgb(238, 238, 238);
+    cursor: pointer;
+  }
+
+  .statusLevelView {
+    position: relative;
+    bottom: 7px;
+  }

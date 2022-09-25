@@ -1,66 +1,79 @@
-<table *ngIf="length" mat-table [dataSource]="monitoringDatasource" class="mat-elevation-z8">
+<div class="main">
+  <h3>Monitors List</h3>
+  <table *ngIf="length" mat-table [dataSource]="monitorListDatasource" class="mat-elevation-z8">
+    <ng-container matColumnDef="monitorName">
+      <th mat-header-cell *matHeaderCellDef> Monitor Name </th>
+      <td mat-cell *matCellDef="let x2"> {{x2.monitorName}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="monitorType">
+      <th mat-header-cell *matHeaderCellDef> Monitor Type </th>
+      <td mat-cell *matCellDef="let x"> {{x.monitorType}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="createdBy">
+      <th mat-header-cell *matHeaderCellDef> Created By </th>
+      <td mat-cell *matCellDef="let x"> {{x.createdBy}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="createdDate">
+      <th mat-header-cell *matHeaderCellDef> Created Date </th>
+      <td mat-cell *matCellDef="let x"> {{x.createdDate}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="frequency">
+      <th mat-header-cell *matHeaderCellDef> Frequency </th>
+      <td mat-cell *matCellDef="let x"> {{x.frequency}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="monitorInNight">
+      <th mat-header-cell *matHeaderCellDef> Monitor In Night </th>
+      <td mat-cell *matCellDef="let x"> {{x.monitorInNight}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="mobileNumber">
+      <th mat-header-cell *matHeaderCellDef> Mobile Number </th>
+      <td mat-cell *matCellDef="let x"> {{x.mobileNumber}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="email">
+      <th mat-header-cell *matHeaderCellDef> Email </th>
+      <td mat-cell *matCellDef="let x"> {{x.email}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="delete">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Delete</th>
+      <td mat-cell *matCellDef="let element">
+
+        <button type="button" (click)="deleteItem(element.id)">
+          <mat-icon class="delete-list">delete</mat-icon>
+        </button>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="edit">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Edit</th>
+      <td mat-cell *matCellDef="let element">
+        <button mat-raised-button color="primary" (click)=" openDialog(element)">
+          <mat-icon class="edit-list">edit</mat-icon>
+        </button>
+      </td>
+    </ng-container>
 
 
-  <ng-container matColumnDef="monitorName">
-    <th mat-header-cell *matHeaderCellDef> Monitor Name </th>
-    <td mat-cell *matCellDef="let x2"> {{x2.monitorName}} </td>
-  </ng-container>
 
-  <ng-container matColumnDef="monitorType">
-    <th mat-header-cell *matHeaderCellDef> Monitor Type </th>
-    <td mat-cell *matCellDef="let x"> {{x.monitorType}} </td>
-  </ng-container>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 
-  <!-- Name Column -->
-  <ng-container matColumnDef="createdBy">
-    <th mat-header-cell *matHeaderCellDef> Created By </th>
-    <td mat-cell *matCellDef="let x"> {{x.createdBy}} </td>
-  </ng-container>
+  </table>
 
-  <!-- Name Column -->
-  <ng-container matColumnDef="createdDate">
-    <th mat-header-cell *matHeaderCellDef> Created Date </th>
-    <td mat-cell *matCellDef="let x"> {{x.createdDate}} </td>
-  </ng-container>
-
-  <!-- Name Column -->
-  <ng-container matColumnDef="frequency">
-    <th mat-header-cell *matHeaderCellDef> Frequency </th>
-    <td mat-cell *matCellDef="let x"> {{x.frequency}} </td>
-  </ng-container>
-
-  <ng-container matColumnDef="monitorInNight">
-    <th mat-header-cell *matHeaderCellDef> Monitor In Night </th>
-    <td mat-cell *matCellDef="let x"> {{x.monitorInNight}} </td>
-  </ng-container>
-
-  <!-- Name Column -->
-  <ng-container matColumnDef="mobileNumber">
-    <th mat-header-cell *matHeaderCellDef> Mobile Number </th>
-    <td mat-cell *matCellDef="let x"> {{x.mobileNumber}} </td>
-  </ng-container>
-
-  <!-- Name Column -->
-  <ng-container matColumnDef="email">
-    <th mat-header-cell *matHeaderCellDef> Email </th>
-    <td mat-cell *matCellDef="let x"> {{x.email}} </td>
-  </ng-container>
-
-  <!-- <ng-container matColumnDef="mobileNumber">
-    <th mat-header-cell *matHeaderCellDef> Edit </th>
-    <td mat-cell *matCellDef="let x"> {{x.mobileNumber}} </td>
-  </ng-container> -->
-  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-
-</table>
-
-<!-- [pageSizeOptions]="[5, 10, 25, 100]" -->
+  <!-- [pageSizeOptions]="[5, 10, 25, 100]" -->
 
 
-<mat-paginator class="paginator-" [length]="length" [pageSize]="pageSize" (page)="pageEvent2($event)"
-  aria-label="Select page">
-</mat-paginator>
+  <mat-paginator class="paginator-" [length]="length" [pageSize]="pageSize" (page)="pageEvent2($event)"
+    aria-label="Select page">
+  </mat-paginator>
 
 
-<router-outlet></router-outlet>
+  <router-outlet></router-outlet>
+</div>

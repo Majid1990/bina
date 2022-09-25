@@ -41,7 +41,7 @@ export class AddMonitorComponent implements OnInit {
     this.addMonitorService.createMonitor(this.mainFormGroup?.value).subscribe(x => {
       console.log(x)
     })
-    this.mainFormGroup?.reset()
+    // this.mainFormGroup?.reset()
   }
   webLinkURLReceived(e: string) {
     this.website = e

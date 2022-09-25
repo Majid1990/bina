@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { MonitorDatasource } from './monitor-list.component';
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +10,13 @@ export class MonitorListService {
   data: any;
   constructor(private http: HttpClient) { }
 
-  monitorList() {
-    return this.data = this.http.get('https://monitoring-a4b2a-default-rtdb.firebaseio.com/posts.json')
+  getMonitorList() {
+    return this.data = this.http.get('https://monitor-list-default-rtdb.firebaseio.com/posts.json')
+  }
+  deleteItem(id: string) {
+    return this.http.delete('https://monitor-list-default-rtdb.firebaseio.com/posts/' + id + '.json')
+  }
+  editItem(eve: MonitorDatasource) {
+    debugger
   }
 }

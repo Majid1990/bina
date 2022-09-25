@@ -1,9 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { MonitorListService } from './monitor-list.service';
 import { MonitorInfo } from './monitorList.model';
 import { map } from 'rxjs';
 import { PageEvent } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
+import { MatDialog } from '@angular/material/dialog';
+import { DialogComponent } from './dialog/dialog.component';
 
 
 @Component({
@@ -15,36 +17,45 @@ import { MatTableDataSource } from '@angular/material/table';
 export class MonitorListComponent implements OnInit {
 
   clickedRows = new Set<PeriodicElement>();
-  monitoringList: { id: string, monitorInfo: MonitorInfo }[] = [];
-  monitoringList2: MonitorInfo[] = [];
-  displayedColumns: string[] = ['monitorName', 'monitorType', 'createdBy', 'createdDate', 'frequency', 'monitorInNight', 'mobileNumber', 'email'];
-  monitoringDatasource: MonitorDatasource[] = []
+  // monitoringList: { id: string, monitorInfo: MonitorInfo }[] = [];
+  monitors: MonitorInfo[] = [];
+  displayedColumns: string[] = ['monitorName', 'monitorType', 'createdBy', 'createdDate', 'frequency', 'monitorInNight', 'mobileNumber', 'email', 'delete', 'edit'];
+  monitorListDatasource: MonitorDatasource[] = []
   dataSorce = new MatTableDataSource(this.displayedColumns); // ELEMENT_DATA
+  animal: string = 'dog'
 
   length = 0;
   pageSize = 8;
   pageSizeOptions: number[] = [2, 4, 6, 8, 10];
   pageEvent?: PageEvent;
-  constructor(private monitorListService: MonitorListService) { }
+  constructor(private monitorListService: MonitorListService, public dialog: MatDialog) { }
 
   ngOnInit(): void {
-    this.monitorListService.monitorList().pipe(map((loadedData: any) => {
-      const y: { id: string, monitorInfo: MonitorInfo }[] = [];
+    this.getMonitors();
+  }
+  private getMonitors() {
+    this.monitorListService.getMonitorList().pipe(map((loadedData: any) => {
+      this.monitors = [];
+      const y: { id: string; monitorInfo: MonitorInfo; }[] = [];
       for (const key in loadedData) {
         if (loadedData.hasOwnProperty(key)) {
-          y.push({ id: key, monitorInfo: loadedData[key] as MonitorInfo });
-          this.monitoringList2.push(loadedData[key] as MonitorInfo)
+          let monitorInfo = loadedData[key] as MonitorInfo;
+          monitorInfo.id = key;
+          this.monitors.push(monitorInfo);
         }
       }
-      this.monitoringList = y
-      this.length = this.monitoringList2.length
+      //this.monitoringList = y
+      this.length = this.monitors.length;
 
       this.getTableDataSource(0);
       return y;
     })).subscribe(data => {
-      console.log(data)
-    })
+      console.log(data);
+
+    });
+
   }
+
   pageEvent2(eve: any) {
     const from = eve.pageIndex * this.pageSize
     this.getTableDataSource(from);
@@ -52,7 +63,7 @@ export class MonitorListComponent implements OnInit {
 
   private getTableDataSource(from: number) {
     const to: number = from + this.pageSize
-    this.monitoringDatasource = this.monitoringList2.map((item) => {
+    this.monitorListDatasource = this.monitors.map((item) => {
       const mappedData: MonitorDatasource = {
         monitorName: item?.generalInfo?.monitorName,
         createdBy: item?.generalInfo?.createdBy,
@@ -61,14 +72,32 @@ export class MonitorListComponent implements OnInit {
         monitorInNight: item?.monitoringFrequency?.monitorInNight,
         mobileNumber: item?.contactInfo?.mobileNumber,
         email: item?.contactInfo?.email,
-        monitorType: item?.monitorType
+        monitorType: item?.monitorType,
+        id: item?.id
       };
 
       return mappedData;
     }).slice(from, to);
   }
 
+  deleteItem(id: string) {
+    this.monitorListService.deleteItem(id).subscribe(() => {
+      this.getMonitors()
+    })
 
+  }
+
+  openDialog(element: MonitorDatasource): void {
+    const dialogRef = this.dialog.open(DialogComponent, {
+      width: '60%',
+      data: element
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+      this.animal = result;
+    });
+  }
 }
 
 
@@ -87,5 +116,6 @@ export interface MonitorDatasource {
   monitorInNight: boolean,
   mobileNumber: number,
   email: string,
-  monitorType: string
+  monitorType: string,
+  id: string
 }

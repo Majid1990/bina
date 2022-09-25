@@ -13,6 +13,7 @@ export class AddMonitorService {
 
   createMonitor(eve: any) {
 
-    return this.http.post('https://bina-61c21-default-rtdb.firebaseio.com/posts.json', eve)
+    return this.http.post('https://monitor-list-default-rtdb.firebaseio.com//posts.json', eve)
+
   }
 }

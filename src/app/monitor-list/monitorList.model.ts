@@ -1,4 +1,5 @@
 export interface MonitorInfo {
+    id: string,
     contactInfo: {
         mobileNumber: number,
         email: string

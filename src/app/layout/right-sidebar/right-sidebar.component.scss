@@ -1,18 +1,13 @@
-body {
-  color: #292929;
-  font: 90% Roboto, Arial, sans-serif;
-  font-weight: 300;
-}
-
 p {
-  padding: 0 10px;
+  padding: 10px 5px;
   line-height: 1.8;
 }
 
-// ul li {
-//   padding-right: 10px;
-//   line-height: 1.6;
-// }
+ul li {
+  padding: 10px;
+  line-height: 1.6;
+  text-align: justify;
+}
 
 h3 {
   padding: 5px 20px;

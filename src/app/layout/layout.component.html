@@ -1,11 +1,11 @@
 <body>
   <div id="container">
     <div id="header">
-      <a class="home" [routerLink]="'home'">Home</a>
-      <a class="about-us" [routerLink]="'about-us'">About us</a>
       <a class="add-monitor" [routerLink]="'add-monitor'">Add monitor</a>
       <a class="monitorList" [routerLink]="'monitorList'">Monitor list</a>
       <a class="reports" [routerLink]="'reports'">Reports</a>
+      <a class="home" [routerLink]="'home'">Home</a>
+      <a class="about-us" [routerLink]="'about-us'">About us</a>
 
     </div>
     <div id="wrapper">
@@ -13,20 +13,10 @@
         <router-outlet></router-outlet>
       </div>
     </div>
+    <app-right-sidebar></app-right-sidebar>
 
-    <div id="extra">
-      <p><strong>Availability and response time</strong></p>
-      <ul>
-        <li> In many cases, you need to view the status of the interfaces of a device such as a switch live, some of
-          these
-          interfaces must always be UP, and their down will cause network disruption. In Bina, you can add your desired
-          interfaces for each device and be informed of the issue by setting the disturbance condition if the situation
-          changes.
-        </li>
-      </ul>
-    </div>
     <div id="footer">
-      <p>Footer</p>
+      <p></p>
     </div>
   </div>
   <script type="text/javascript">
@@ -34,5 +24,3 @@
 
   </script>
 </body>
-
-<!-- </html> -->
