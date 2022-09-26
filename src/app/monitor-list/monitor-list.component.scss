@@ -1,5 +1,9 @@
+$border:rgb(238, 238, 238);
+$bg-color: rgb(120, 120, 120);
+
 .main {
   margin: 3px;
+  padding-left: 5.1%;
 }
 
 h3 {
@@ -14,13 +18,12 @@ h3 {
 
 table {
   text-align: end;
-  // margin-left: 6%;
   border-bottom: 1px solid rgb(217, 217, 217);
 }
 
 .mat-row .mat-cell {
   border-bottom: 1px solid transparent;
-  border-top: 1px solid rgb(238, 238, 238);
+  border-top: 1px solid border;
   cursor: pointer;
   background-color: rgba(244, 241, 241, 0.395);
 }
@@ -49,11 +52,11 @@ table td {
 }
 
 table td:first-child {
-  border-left: 1px solid rgb(238, 238, 238);
+  border-left: 1px solid border;
 }
 
 table td:last-child {
-  border-right: 1px solid rgb(238, 238, 238)
+  border-right: 1px solid border;
 }
 
 .paginator- {
@@ -63,13 +66,13 @@ table td:last-child {
 
 .deleteButton:hover {
   color: white;
-  background-color: rgb(120, 120, 120);
+  background-color: $bg-color;
   padding: 10px 0px;
 }
 
 .editButton:hover {
   color: white;
-  background-color: rgb(120, 120, 120);
+  background-color: $bg-color;
   padding: 10px 0px;
 }
 

@@ -1,3 +1,5 @@
+$bg-color: rgb(177, 208, 207);
+
 body {
   color: #292929;
   font: 90% Roboto, Arial, sans-serif;
@@ -8,11 +10,6 @@ p {
   padding: 0 10px;
   line-height: 1.8;
 }
-
-// ul li {
-//   padding-right: 10px;
-//   line-height: 1.6;
-// }
 
 h3 {
   padding: 5px 20px;
@@ -25,7 +22,7 @@ div#header {
   line-height: 80px;
   margin: 0;
   padding-left: 5%;
-  background: rgb(177, 208, 207);
+  background: $bg-color;
   color: #292929;
   position: relative;
   font-size: 1.2em;
@@ -37,13 +34,13 @@ div#header a:hover {
 
 .add-monitor {
   flex: 1.5;
-  background-color: rgb(177, 208, 207);
+  background-color: $bg-color;
   text-decoration: none;
 }
 
 .monitorList {
   flex: 1.5;
-  background-color: rgb(177, 208, 207);
+  background-color: $bg-color;
   text-decoration: none;
 }
 
@@ -54,13 +51,13 @@ div#header a:hover {
 
 .home {
   flex: 1.5;
-  background-color: rgb(177, 208, 207);
+  background-color: $bg-color;
   text-decoration: none;
 }
 
 .about-us {
   flex: 1.5;
-  background-color: rgb(177, 208, 207);
+  background-color: $bg-color;
   text-decoration: none;
 }
 

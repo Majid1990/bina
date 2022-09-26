@@ -17,7 +17,6 @@ export class MonitorLogComponent implements OnInit {
       selectedLog: new FormControl(null, Validators.required),
       selectedLogregex: new FormControl(null, Validators.required),
       credential: new FormControl(null, Validators.required),
-      // selectedLogType: new FormControl(null),
       information: new FormControl(null),
       error: new FormControl(null),
       warning: new FormControl(null),

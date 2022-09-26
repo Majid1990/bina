@@ -11,9 +11,7 @@ export class WebsiteComponent implements OnInit {
 
   @Output() webLinkURL = new EventEmitter<string>();
   @Input() parentFormGroup?: FormGroup;
-  // webLink: string = '';
-  //warning: number = 0;
-  // critical: number = 0;
+
   websiteForm?: FormGroup
   majid: number = 20;
   websiteLink: string = '';

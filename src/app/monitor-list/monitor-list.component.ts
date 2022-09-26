@@ -1,4 +1,4 @@
-import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MonitorListService } from './monitor-list.service';
 import { MonitorInfo } from './monitorList.model';
 import { map } from 'rxjs';
@@ -17,15 +17,13 @@ import { DialogComponent } from './dialog/dialog.component';
 export class MonitorListComponent implements OnInit {
 
   clickedRows = new Set<PeriodicElement>();
-  // monitoringList: { id: string, monitorInfo: MonitorInfo }[] = [];
   monitors: MonitorInfo[] = [];
   displayedColumns: string[] = ['monitorName', 'monitorType', 'createdBy', 'createdDate', 'frequency', 'monitorInNight', 'mobileNumber', 'email', 'delete', 'edit'];
   monitorListDatasource: MonitorDatasource[] = []
-  dataSorce = new MatTableDataSource(this.displayedColumns); // ELEMENT_DATA
-  animal: string = 'dog'
-
+  dataSorce = new MatTableDataSource(this.displayedColumns);
+  storedData: string = '';
   length = 0;
-  pageSize = 8;
+  pageSize = 9;
   pageSizeOptions: number[] = [2, 4, 6, 8, 10];
   pageEvent?: PageEvent;
   constructor(private monitorListService: MonitorListService, public dialog: MatDialog) { }
@@ -44,7 +42,6 @@ export class MonitorListComponent implements OnInit {
           this.monitors.push(monitorInfo);
         }
       }
-      //this.monitoringList = y
       this.length = this.monitors.length;
 
       this.getTableDataSource(0);
@@ -84,7 +81,6 @@ export class MonitorListComponent implements OnInit {
     this.monitorListService.deleteItem(id).subscribe(() => {
       this.getMonitors()
     })
-
   }
 
   openDialog(element: MonitorDatasource): void {
@@ -95,7 +91,7 @@ export class MonitorListComponent implements OnInit {
 
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed');
-      this.animal = result;
+      this.storedData = result;
     });
   }
 }

@@ -16,7 +16,8 @@ export class MonitorListService {
   deleteItem(id: string) {
     return this.http.delete('https://monitor-list-default-rtdb.firebaseio.com/posts/' + id + '.json')
   }
-  editItem(eve: MonitorDatasource) {
+  editItem(id: MonitorDatasource, value: any) {
     debugger
+    return this.http.put('https://monitor-list-default-rtdb.firebaseio.com/posts/' + id + '.json', value)
   }
 }

@@ -21,25 +21,6 @@ export class SwitchComponent implements OnInit {
     })
     this.parentFormGroup?.addControl('swName', this.switchForm)
   }
-
-  onInputIp() {
-
-    // const ip = this.switchForm?.get('switchIP')?.value;
-    // var lastDot = ip.lastIndexOf('.');
-
-    // if (ip.length - lastDot === 4) {
-    //   const firstPart = ip.substring(0, ip.length - 1);
-    //   const lastPart = ip.substring(ip.length - 1, ip.length);
-    //   const final = firstPart + '.' + lastPart;
-    //   this.switchForm?.get('switchIP')?.setValue(final);
-    // }
-
-
-
-    // this.ipService.FormValue(this.switchForm);
-    // this.switchForm = this.ipService.finalForm;
-
-  }
 }
 
 

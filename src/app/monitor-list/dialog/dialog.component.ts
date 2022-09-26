@@ -19,7 +19,6 @@ export class DialogComponent implements OnInit {
 
   constructor(public dialogRef: MatDialogRef<DialogComponent>,
     @Inject(MAT_DIALOG_DATA) public data: MonitorDatasource, private fb: FormBuilder, private monitorListService: MonitorListService) {
-    debugger
   }
 
   ngOnInit(): void {
@@ -44,7 +43,7 @@ export class DialogComponent implements OnInit {
     this.mainFormGroup.get("generalInfo")?.get("monitorName")?.disable()
   }
   submit(eve: MonitorDatasource) {
-    this.monitorListService.editItem(eve)
+    this.monitorListService.editItem(eve, this.mainFormGroup?.value)
   }
 
 

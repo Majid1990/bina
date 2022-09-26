@@ -7,7 +7,6 @@ import { IpService } from './ip.service';
 export class IpDirective implements OnInit {
 
   @HostListener('input') keyup(eventData: any) {
-    // const ip = this.ipService.formsValue;
     const ip = this.el.nativeElement.value;
     var lastDot = ip.lastIndexOf('.');
     if (ip.length - lastDot === 4) {

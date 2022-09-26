@@ -1,3 +1,12 @@
+div#extra {
+  float: left;
+  width: 200px;
+  margin-left: -200px;
+  height: 630px;
+  background-color: rgb(189, 202, 176);
+  border: 1px solid rgb(171, 176, 166);
+}
+
 p {
   padding: 10px 5px;
   line-height: 1.8;
@@ -9,90 +18,6 @@ ul li {
   text-align: justify;
 }
 
-h3 {
-  padding: 5px 20px;
-  margin: 0;
-}
-
-div#header {
-  display: flex;
-  height: 80px;
-  line-height: 80px;
-  margin: 0;
-  padding-left: 5%;
-  background: rgb(177, 208, 207);
-  color: #292929;
-  position: relative;
-  font-size: 1.2em;
-}
-
-div#header a:hover {
-  font-weight: bolder;
-}
-
-.add-monitor {
-  flex: 1.5;
-  background-color: rgb(177, 208, 207);
-  text-decoration: none;
-}
-
-.monitorList {
-  flex: 1.5;
-  background-color: rgb(177, 208, 207);
-  text-decoration: none;
-}
-
-.reports {
-  flex: 9.5;
-  text-decoration: none;
-}
-
-.home {
-  flex: 1.5;
-  background-color: rgb(177, 208, 207);
-  text-decoration: none;
-}
-
-.about-us {
-  flex: 1.5;
-  background-color: rgb(177, 208, 207);
-  text-decoration: none;
-}
-
-div#wrapper {
-  float: left;
-  width: 100%;
-}
-
-div#content {
-  margin-right: 20%;
-  height: 630px;
-  overflow: auto;
-  text-align: justify;
-}
-
-div#navigation {
-  float: left;
-  width: 200px;
-  margin-left: -400px;
-}
-
-div#extra {
-  float: left;
-  width: 200px;
-  margin-left: -200px;
-  height: 630px;
-  background-color: rgb(189, 202, 176);
-}
-
-div#footer {
-  clear: left;
-  width: 100%;
-  height: initial;
-  background: #42444e;
-  color: #fff;
-}
-
-div#footer p {
-  padding: 17px;
+mat-sidenav {
+  width: 400px;
 }

@@ -54,26 +54,21 @@
     <ng-container matColumnDef="edit">
       <th mat-header-cell *matHeaderCellDef mat-sort-header>Edit</th>
       <td mat-cell *matCellDef="let element">
-        <button mat-raised-button color="primary" (click)=" openDialog(element)">
+        <button mat-raised-button color="primary" (click)=" openDialog(element.id)">
           <mat-icon class="edit-list">edit</mat-icon>
         </button>
       </td>
     </ng-container>
-
-
 
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 
   </table>
 
-  <!-- [pageSizeOptions]="[5, 10, 25, 100]" -->
-
 
   <mat-paginator class="paginator-" [length]="length" [pageSize]="pageSize" (page)="pageEvent2($event)"
     aria-label="Select page">
   </mat-paginator>
-
 
   <router-outlet></router-outlet>
 </div>

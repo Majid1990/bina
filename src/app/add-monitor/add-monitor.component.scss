@@ -1,13 +1,13 @@
 :host {
-    display: flex;
-     flex-direction: column;
-    align-items: flex-start;
-  }
-  .d-block {
-    // background-color: red;
-    
-    display: block;
-  }
-  .mainDiv {
-    padding-left: 5%;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.d-block {
+  display: block;
+}
+
+.mainDiv {
+  padding-left: 5%;
+}

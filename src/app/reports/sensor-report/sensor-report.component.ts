@@ -22,7 +22,6 @@ export class SensorReportComponent implements OnInit {
         if (data.hasOwnProperty(key)) {
           y.push({ id: key, sensorReportData: data[key] as DisplaySensor });
           this.dataList2.push(data[key] as DisplaySensor)
-          //  if (data.temprature.value > 30) { }
         }
       }
       this.sensorDatabaseSorce();
