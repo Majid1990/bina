@@ -30,6 +30,8 @@ export class MonitorListComponent implements OnInit {
 
   ngOnInit(): void {
     this.getMonitors();
+
+
   }
   private getMonitors() {
     this.monitorListService.getMonitorList().pipe(map((loadedData: any) => {
@@ -90,8 +92,10 @@ export class MonitorListComponent implements OnInit {
     });
 
     dialogRef.afterClosed().subscribe(result => {
+      debugger
       console.log('The dialog was closed');
       this.storedData = result;
+      this.getMonitors()
     });
   }
 }
