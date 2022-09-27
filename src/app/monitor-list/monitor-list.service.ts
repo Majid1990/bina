@@ -1,6 +1,5 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { MonitorDatasource } from './monitor-list.component';
 
 @Injectable({
   providedIn: 'root'

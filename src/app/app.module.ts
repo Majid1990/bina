@@ -6,7 +6,6 @@ import { LayoutComponent } from './layout/layout.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { IpYpeDirective } from './ip-ype.directive';
-import { RightSidebarComponent } from './layout/right-sidebar/right-sidebar.component';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatDialogModule } from '@angular/material/dialog';
 import { DialogComponent } from './monitor-list/dialog/dialog.component';
@@ -26,9 +25,7 @@ import { MatIconModule } from '@angular/material/icon'
     AppComponent,
     LayoutComponent,
     IpYpeDirective,
-    RightSidebarComponent,
     DialogComponent
-
   ],
   imports: [
     BrowserModule,
@@ -50,7 +47,6 @@ import { MatIconModule } from '@angular/material/icon'
     MatSidenavModule,
     MatIconModule
   ],
-
   providers: [],
   bootstrap: [AppComponent]
 })

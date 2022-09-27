@@ -7,14 +7,32 @@
       <a class="home" [routerLink]="'home'">Home</a>
       <a class="about-us" [routerLink]="'about-us'">About us</a>
 
+      <button type="button" mat-button (click)="drawer.toggle()">
+        <div class="hambergur">
+          <mat-icon>reorder</mat-icon>
+        </div>
+      </button>
     </div>
     <div id="wrapper">
       <div id="content">
         <router-outlet></router-outlet>
       </div>
     </div>
-    <app-right-sidebar></app-right-sidebar>
 
+    <div class="sidenav">
+      <mat-drawer-container class="example-container" autosize>
+        <mat-drawer #drawer class="example-sidenav" mode="side">
+          <p> In many cases, you need to view the status of the interfaces of a device such as a switch live, some
+            of these interfaces must always be UP, and their down will cause network disruption. In Bina, you can add
+            your desired interfaces for each device and be informed of the issue by setting the disturbance condition
+            if the situation changes.
+          </p>
+        </mat-drawer>
+
+        <div class="example-sidenav-content">
+        </div>
+      </mat-drawer-container>
+    </div>
     <div id="footer">
       <p></p>
     </div>
