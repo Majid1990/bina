@@ -1,4 +1,4 @@
-  <form [formGroup]="mainFormGroup!" (ngSubmit)="submit($event)">
+  <form [formGroup]="mainFormGroup!" (ngSubmit)="submit()">
 
     <mat-form-field class="d-block" appearance="fill" fxFlex>
       <mat-label>Select a monitor type</mat-label>
@@ -14,17 +14,17 @@
     <div formGroupName="generalInfo">
       <mat-form-field class="example-full-width d-block" appearance="fill" fxFlex>
         <mat-label> Monitor name </mat-label>
-        <input formControlName="monitorName" matInput placeholder="Write the monitor name" value="">
+        <input formControlName="monitorName" matInput placeholder="Write the monitor name">
       </mat-form-field>
 
       <mat-form-field class="example-full-width d-block" appearance="fill" fxFlex>
         <mat-label> Created by </mat-label>
-        <input formControlName="createdBy" matInput placeholder="Created by" value="">
+        <input formControlName="createdBy" matInput placeholder="Created by">
       </mat-form-field>
 
       <mat-form-field class="example-full-width d-block" appearance="fill" fxFlex>
         <mat-label> Created date </mat-label>
-        <input type="date" formControlName="createdDate" matInput placeholder="Select the date" value="">
+        <input type="date" formControlName="createdDate" matInput placeholder="Select the date">
       </mat-form-field>
     </div>
     <div formGroupName="monitoringFrequency">
@@ -50,5 +50,5 @@
     Ignore
     <!-- </mat-icon> -->
   </button>
-  <button type="button" mat-stroked-button color="primary" (click)="submit(selectedMonitor)">Update</button>
+  <button type="button" mat-stroked-button color="primary" [mat-dialog-close]="true" (click)="submit()">Update</button>
   <mat-dialog-content>

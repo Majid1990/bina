@@ -39,11 +39,11 @@ export class DialogComponent implements OnInit {
       }),
       monitorType: new FormControl(this.data.monitorType, Validators.required),
     })
-    this.mainFormGroup.get("monitorType")?.disable()
-    this.mainFormGroup.get("generalInfo")?.get("monitorName")?.disable()
+    // this.mainFormGroup.get("monitorType")?.disable()
+    // this.mainFormGroup.get("generalInfo")?.get("monitorName")?.disable()
   }
-  submit(eve: MonitorDatasource) {
-    this.monitorListService.editItem(eve, this.mainFormGroup?.value)
+  submit() {
+    this.monitorListService.editItem(this.data.id, this.mainFormGroup?.value).subscribe()
   }
 
 
