@@ -1,5 +1,5 @@
 <body>
-  <div id="container">
+  <div class="container">
     <div id="header">
       <button type="button" mat-button (click)="drawer.toggle()" (click)="changeStatus()">
         <div class="hambergur">
@@ -19,11 +19,12 @@
       </div>
     </div>
 
-    <div class="sidenav">
+    <div #toggles class="sidenav">
       <mat-drawer-container class="example-container" autosize>
         <mat-drawer #drawer class="example-sidenav" mode="side">
           <h2>Bita</h2>
-          <p> In many cases, you need to view the status of the interfaces of a device such as a switch live, some
+          <p> In many cases, you need to view the status of the interfaces of a device such as a switch live,
+            some
             of these interfaces must always be UP, and their down will cause network disruption. In Bina, you can add
             your desired interfaces for each device and be informed of the issue by setting the disturbance condition
             if the situation changes.

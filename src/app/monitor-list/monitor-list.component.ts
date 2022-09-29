@@ -30,8 +30,6 @@ export class MonitorListComponent implements OnInit {
 
   ngOnInit(): void {
     this.getMonitors();
-
-
   }
   private getMonitors() {
     this.monitorListService.getMonitorList().pipe(map((loadedData: any) => {

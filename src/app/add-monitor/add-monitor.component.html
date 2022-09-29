@@ -1,4 +1,4 @@
-<div class="mainDiv">
+<div class="mainDiv col-xs-12">
   <h2>Create new monitors</h2>
   <form [formGroup]="mainFormGroup!" (ngSubmit)="submit($event)">
 
@@ -59,3 +59,5 @@
 
   <button type="button" mat-stroked-button color="primary" (click)="submit(selectedMonitor)">Save</button>
 </div>
+
+<img class="create-picture" src="../../assets/create.png" alt="">

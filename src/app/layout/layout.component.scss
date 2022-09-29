@@ -1,4 +1,5 @@
 $bg-color: rgb(177, 208, 207);
+$flex-1-5: 1.5;
 
 body {
   color: #292929;
@@ -34,13 +35,13 @@ div#header a:hover {
 }
 
 .add-monitor {
-  flex: 1.5;
+  flex: $flex-1-5;
   background-color: $bg-color;
   text-decoration: none;
 }
 
 .monitorList {
-  flex: 1.5;
+  flex: $flex-1-5;
   background-color: $bg-color;
   text-decoration: none;
 }
@@ -51,13 +52,13 @@ div#header a:hover {
 }
 
 .home {
-  flex: 1.5;
+  flex: $flex-1-5;
   background-color: $bg-color;
   text-decoration: none;
 }
 
 .about-us {
-  flex: 1.5;
+  flex: $flex-1-5;
   background-color: $bg-color;
   text-decoration: none;
 }
@@ -68,7 +69,6 @@ div#wrapper {
 }
 
 div#content {
-  margin-right: 1%;
   height: 630px;
   overflow: auto;
   text-align: justify;
@@ -92,7 +92,8 @@ div#footer p {
 }
 
 .example-container {
-  width: 200px;
+  width: 200px max-content;
+  overflow: hidden;
   height: 631px;
   background-color: white;
 }
