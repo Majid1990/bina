@@ -1,11 +1,12 @@
-$bg-color: rgb(177, 208, 207);
+$bg-color: rgb(226, 238, 238);
 $flex-1-5: 1.5;
 
 body {
-  color: #292929;
+  color: #000000;
   font: 90% Roboto, Arial, sans-serif;
   font-weight: 300;
   position: relative !important;
+  font-size: 14px;
 }
 
 p {
@@ -25,24 +26,24 @@ div#header {
   margin: 0;
   padding-left: 0.1%;
   background: $bg-color;
-  color: #292929;
+  color: rgb(0, 0, 0);
   position: relative;
   font-size: 1.2em;
+  font-weight: 400;
 }
 
 div#header a:hover {
-  font-weight: bolder;
+  color: #000dca;
+  font-weight: 450;
 }
 
 .add-monitor {
   flex: $flex-1-5;
-  background-color: $bg-color;
   text-decoration: none;
 }
 
 .monitorList {
   flex: $flex-1-5;
-  background-color: $bg-color;
   text-decoration: none;
 }
 
@@ -53,13 +54,11 @@ div#header a:hover {
 
 .home {
   flex: $flex-1-5;
-  background-color: $bg-color;
   text-decoration: none;
 }
 
 .about-us {
   flex: $flex-1-5;
-  background-color: $bg-color;
   text-decoration: none;
 }
 
@@ -121,4 +120,13 @@ div#footer p {
 
 h2 {
   text-align: center;
+}
+
+.hambergur {
+  padding: 12px 10px 0 0px;
+}
+
+.hambergur:hover {
+  color: blue;
+  font-weight: bold;
 }

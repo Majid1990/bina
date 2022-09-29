@@ -3,6 +3,11 @@ table {
   margin-left: 2%;
 }
 
+table th {
+  color: black;
+  background-color: rgb(221, 229, 226);
+}
+
 .monitorState {
   color: black;
   position: relative;
@@ -14,8 +19,8 @@ table {
 }
 
 .mat-row:hover .mat-cell {
-  border-color: black;
-  color: blue;
+  background-color: rgb(0, 0, 0);
+  color: white;
 }
 
 .mat-row .mat-cell {

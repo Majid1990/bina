@@ -1,10 +1,11 @@
   table {
     width: 95%;
-    margin-left: 2%;
+    margin: 1% 0 0 2%;
   }
 
   table th {
     color: black;
+    background-color: rgb(221, 229, 226);
   }
 
   .message {
@@ -16,8 +17,8 @@
   }
 
   .mat-row:hover .mat-cell {
-    border-color: black;
-    color: blue;
+    background-color: rgb(0, 0, 0);
+    color: white;
   }
 
   .mat-row .mat-cell {

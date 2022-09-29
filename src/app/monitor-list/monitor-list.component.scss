@@ -2,9 +2,12 @@ $border:rgb(238, 238, 238);
 $bg-color: rgb(120, 120, 120);
 
 .main {
-  margin-left: 4%;
-  padding-left: 5.1%;
-  width: max-content;
+  margin: 0.2% 0 0 5%;
+  width: 90%;
+  border: 1px solid rgb(203, 203, 203);
+  border-radius: 1em;
+  background-color: rgba(255, 255, 255, 0.826);
+  padding: 15px;
 }
 
 h3 {
@@ -20,17 +23,18 @@ h3 {
 table {
   text-align: end;
   border-bottom: 1px solid rgb(217, 217, 217);
+  width: 99%;
 }
 
 .mat-row .mat-cell {
   border-bottom: 1px solid transparent;
   border-top: 1px solid border;
   cursor: pointer;
-  background-color: rgba(244, 241, 241, 0.395);
+  background-color: rgba(245, 245, 245, 0.622);
 }
 
 .mat-row:hover .mat-cell {
-  background-color: rgb(230, 230, 230);
+  background-color: rgba(222, 222, 222, 0.633);
   color: black;
 }
 
@@ -40,9 +44,10 @@ table {
 
 table th {
   color: rgb(46, 44, 44);
-  background-color: rgba(219, 219, 219, 0.733);
+  background-color: rgba(197, 205, 199, 0.479);
   padding-left: 40px;
   text-align: left;
+  border-top: 0.1em solid rgb(201, 201, 201);
 }
 
 table td {
@@ -63,6 +68,7 @@ table td:last-child {
 .paginator- {
   color: black;
   padding-right: 4%;
+  background-color: rgba(170, 208, 220, 0.474);
 }
 
 .deleteButton:hover {

@@ -9,11 +9,20 @@
 }
 
 .mainDiv {
-  padding-left: 7%;
+  margin: 1% 0 0 4%;
+  border: 1px solid rgb(214, 214, 214);
+  padding: 30px;
+  border-radius: 1em;
+  background-color: rgba(249, 245, 245, 0.826);
+  width: 55%;
 }
 
 .create-picture {
   position: fixed;
   top: 2;
   right: 0;
+}
+
+h2 {
+  text-align: center;
 }
